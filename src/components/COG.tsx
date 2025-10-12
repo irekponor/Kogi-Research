@@ -27,8 +27,8 @@ const COGMap = () => {
       url: "https://huggingface.co/spaces/marquis07/titiler-geo/resolve/main/Flooded_Cropland_2022_COG.tif",
     },
     {
-      name: "Flooded Cropland",
-      url: "https://huggingface.co/spaces/marquis07/titiler-geo/resolve/main/Flooded_Cropland_2022_COG.tif",
+      name: "WaterBodies",
+      url: "https://huggingface.co/spaces/marquis07/titiler-geo/resolve/main/Flooded_Areas_2022_COG.tif",
     },
     {
       name: "Pre Flood",
