@@ -68,7 +68,7 @@ const COGMap = () => {
           >
             <TileLayer
               url={`https://titiler.xyz/cog/tiles/{z}/{x}/{y}.png?url=${encodeURIComponent(
-                layer.url
+                layer.url.replace("/spaces", "")
               )}`}
               attribution={`© ${layer.name}`}
             />
