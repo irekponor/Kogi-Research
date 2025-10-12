@@ -12,35 +12,35 @@ const COGMap = () => {
   const cogLayers = [
     {
       name: "Sentinel 1",
-      url: "https://huggingface.co/marquis07/titiler-geo/resolve/main/Sentinel1_VV_2022_COG.tif",
+      url: "https://huggingface.co/spaces/marquis07/titiler-geo/resolve/main/Sentinel1_VV_2022_COG.tif",
     },
     {
       name: "Cropland 2021",
-      url: "https://huggingface.co/marquis07/titiler-geo/resolve/main/Cropland_ESA_WorldCover_2021_COG.tif",
+      url: "https://huggingface.co/spaces/marquis07/titiler-geo/resolve/main/Cropland_ESA_WorldCover_2021_COG.tif",
     },
     {
       name: "Flooded NDVI",
-      url: "https://huggingface.co/marquis07/titiler-geo/resolve/main/FloodDriven_NDVI_Loss_COG.tif",
+      url: "https://huggingface.co/spaces/marquis07/titiler-geo/resolve/main/FloodDriven_NDVI_Loss_COG.tif",
     },
     {
       name: "Flooded Cropland",
-      url: "https://huggingface.co/marquis07/titiler-geo/resolve/main/Flooded_Cropland_2022_COG.tif",
+      url: "https://huggingface.co/spaces/marquis07/titiler-geo/resolve/main/Flooded_Cropland_2022_COG.tif",
     },
     {
       name: "WaterBodies",
-      url: "https://huggingface.co/marquis07/titiler-geo/resolve/main/Flooded_Areas_2022_COG.tif",
+      url: "https://huggingface.co/spaces/marquis07/titiler-geo/resolve/main/Flooded_Areas_2022_COG.tif",
     },
     {
       name: "Cropland (PreFlood)",
-      url: "https://huggingface.co/marquis07/titiler-geo/resolve/main/NDVI_Cropland_PostFlood_COG.tif",
+      url: "https://huggingface.co/spaces/marquis07/titiler-geo/resolve/main/NDVI_Cropland_PostFlood_COG.tif",
     },
     {
       name: "Cropland (PostFlood)",
-      url: "https://huggingface.co/marquis07/titiler-geo/resolve/main/NDVI_Cropland_PostFlood_COG.tif",
+      url: "https://huggingface.co/spaces/marquis07/titiler-geo/resolve/main/NDVI_Cropland_PostFlood_COG.tif",
     },
     {
       name: "Cropland Change",
-      url: "https://huggingface.co/marquis07/titiler-geo/resolve/main/NDVI_Cropland_Change_COG.tif",
+      url: "https://huggingface.co/spaces/marquis07/titiler-geo/resolve/main/NDVI_Cropland_Change_COG.tif",
     },
   ];
 
@@ -64,12 +64,12 @@ const COGMap = () => {
           <Overlay
             key={i}
             name={layer.name}
-            checked={i === 0} // ✅ Show the first layer (Sentinel) by default
+            checked={i === 0} // ✅ Show the first layer (Cropland 2021) by default
           >
             <TileLayer
               url={`https://titiler.xyz/cog/tiles/{z}/{x}/{y}.png?url=${encodeURIComponent(
                 layer.url
-              )}&rescale=-25,0&colormap=gray`}
+              )}`}
               attribution={`© ${layer.name}`}
             />
           </Overlay>
