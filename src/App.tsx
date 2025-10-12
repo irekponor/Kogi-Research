@@ -1,8 +1,10 @@
+import COG from "./components/COG";
+
 const App = () => {
   return (
-    <div>
-      <h1>OREOLUWA HEPHZIBAH</h1>
-    </div>
+    <>
+      <COG />
+    </>
   );
 };
 
