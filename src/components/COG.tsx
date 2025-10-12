@@ -68,8 +68,8 @@ const COGMap = () => {
           >
             <TileLayer
               url={`https://titiler.xyz/cog/tiles/{z}/{x}/{y}.png?url=${encodeURIComponent(
-                layer.url.replace("/spaces", "")
-              )}`}
+                layer.url
+              )}&rescale=-25,0&colormap=gray`}
               attribution={`© ${layer.name}`}
             />
           </Overlay>
