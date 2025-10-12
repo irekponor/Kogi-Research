@@ -64,7 +64,7 @@ const COGMap = () => {
           <Overlay
             key={i}
             name={layer.name}
-            checked={i === 0} // ✅ Show the first layer (Cropland 2021) by default
+            checked={i === 0} // ✅ Show the first layer (Sentinel) by default
           >
             <TileLayer
               url={`https://titiler.xyz/cog/tiles/{z}/{x}/{y}.png?url=${encodeURIComponent(
