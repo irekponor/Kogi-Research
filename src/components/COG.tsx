@@ -5,8 +5,8 @@ import "leaflet/dist/leaflet.css";
 const { BaseLayer, Overlay } = LayersControl;
 
 const COGMap = () => {
-  const [center] = useState<[number, number]>([9.082, 8.6753]); // Nigeria center
-  const [zoom] = useState(6);
+  const [center] = useState<[number, number]>([7.8023, 6.7333]); // Nigeria center
+  const [zoom] = useState(8);
 
   // Your COG layers — one for each dataset
   const cogLayers = [
