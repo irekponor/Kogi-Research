@@ -8,7 +8,7 @@ const COGMap = () => {
   const [center] = useState<[number, number]>([9.082, 8.6753]); // Nigeria center
   const [zoom] = useState(6);
 
-  // Your COG layers — one for each dataset
+  // COG layers
   const cogLayers = [
     {
       name: "Sentinel 1",
@@ -51,7 +51,6 @@ const COGMap = () => {
       style={{ height: "100vh", width: "100%" }}
     >
       <LayersControl position="topright">
-        {/* Base map */}
         <BaseLayer checked name="OpenStreetMap">
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -59,17 +58,12 @@ const COGMap = () => {
           />
         </BaseLayer>
 
-        {/* COG Layers */}
         {cogLayers.map((layer, i) => (
-          <Overlay
-            key={i}
-            name={layer.name}
-            checked={i === 0} // ✅ Show the first layer (Cropland 2021) by default
-          >
+          <Overlay key={i} name={layer.name} checked={i === 0}>
             <TileLayer
               url={`https://titiler.xyz/cog/tiles/{z}/{x}/{y}.png?url=${encodeURIComponent(
                 layer.url
-              )}`}
+              )}&rescale=0,255&colormap=plasma`}
               attribution={`© ${layer.name}`}
             />
           </Overlay>
